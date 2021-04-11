@@ -2,14 +2,14 @@
 # CandyFloss
 Let's make candy floss with a baxter!!
 
-Baxterのレポジトリが古いためBaxterのソースを一部変更したものをビルドする必要がある
-そのため、以前のセットアップを使用したあとにソースを置き換える必要がある
-また、Baxterラクチンセットアップ中にmoveitのエラーが出るため以下を参照にして追加のコードを打つ必要がある
-https://answers.ros.org/question/304475/cannot-build-moveit/
+Baxterのレポジトリが古いためBaxterのソースを一部変更したものをビルドする必要がある  
+そのため、以前のセットアップを使用したあとにソースを置き換える必要がある  
+また、Baxterラクチンセットアップ中にmoveitのエラーが出るため以下を参照にして追加のコードを打つ必要がある  
+https://answers.ros.org/question/304475/cannot-build-moveit/  
 以下にその手順を示す
 
 ## Baxterラクチンセットアップ
-1. catkin_wsの下にリポジトリをクローンして`setup.sh`を実行する。
+1. catkin_wsの下にリポジトリをクローンして`setup.sh`を実行する。  
    パスワード入力求められたり、いろいろ聞かれるけど適当に対応してあげて
 
        $ cd catkin_ws/src
@@ -22,10 +22,13 @@ https://answers.ros.org/question/304475/cannot-build-moveit/
        $ rosdep install --from-paths src --ignore-src -r -y
 
 ## Baxterの修正したソースの導入
-1. 以前のソースはビルドは可能だが実行時にエラーが出るため、修正したソースに変更する
-まずは、現在のソースを削除する
-       $ コマンドでやりたかったのですが、rmコマンドが怖いので自分でポチポチしてください
-修正後のソースを導入する
+1. 以前のソースはビルドは可能だが実行時にエラーが出るため、修正したソースに変更する  
+まずは、現在のソースを削除する  
+
+       $ コマンドでやりたかったのですが、rmコマンドが怖いので自分でポチポチしてください  
+
+2. 修正後のソースを導入する  
+
        $ cd catkin_ws/src
        $ clone https://github.com/p-robobu/candy_floss_pj.git
        $ cd ..
