@@ -1,1 +1,23 @@
-ここにログを残す
+2021/4/10
+baxterのソースは古くてプラグインのエラーが発生したので以下を修正
+
+candy_floss_pj/src/baxter_common/baxter_description/urdf/baxter_base/baxter_base.gazebo.xacro
+の中の
+<plugin name="baxter_ros_control" filename="libbaxter_gazebo_ros_control.so">
+に
+<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+を追加
+
+ROSのインストールは
+https://gist.github.com/dashimaki360/4d612c845db65a3746e2caab39cf295b
+から行ったけど、10行目が間違っていてキーが
+421C365BD9FF1F717815A3895523BAEEB01FA116
+ではなく
+C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+簡単インストール中moveitのエラーが出た
+これは以下のURL通りにすれば解消した
+https://answers.ros.org/question/304475/cannot-build-moveit/
+
+インストールは昔のsetup.shから行って、srcを最新のものに差し替える
+
